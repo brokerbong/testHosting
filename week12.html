@@ -16,20 +16,24 @@
 	}
 	nav {
 		background: orange;
-		height: 72%;
-		position: fixed;
+		height: 100%;
+		position: absolute;
 		width: 20%
+		
 		
 	}
 	section {
 		background: lightblue;
 		height: 72%;
 		margin-left: 20%;
+		/*overflow: auto;  넘치는 콘텐츠를 스크롤로 처리 */
+        box-sizing: border-box; /* 크기 계산 */
 		
 	}
 	footer {
 		background: pink;
 		height: 8%;
+		position:
 	}
 </style>
 
@@ -42,54 +46,68 @@
 			2022년 5월 10일 윤석열 대통령 취임 선서
         </p>
     </header>
-    <nav>
-		<div style="padding:10px;position: relative;">
-			<ul style="display: inline-block;"> 목차
-				<li><a href="#one">1. 개요</a></li>
-				<li><a href="#two">2. 윤석열 정부</a>
-					<ul style="display: block;">
-						<li><a href="#twoOne">2-1. twoOne</a></li>
-						<li><a href="#twoTwo">2-2. twoTwo</a></li>
-						<li><a href="#twoThree">2-3. twoThree</a></li>
-						<li><a href="#twoFour">2-4. twoFour</a></li>
-					</ul>
-				</li>
-				<li><a href="#three">three 국회</a></li>
-				<li><a href="#four">four 국회</a></li>
-				<li><a href="#five">five 국회</a></li>
-				<li><a href="#six">six 국회</a></li>
-				<li><a href="#seven">seven 국회</a></li>
-				<li><a href="#eight">eight 국회</a></li>
-				<li><a href="#nine">nine 국회</a></li>
-				<li><a href="#ten">ten 국회</a></li>
-			</ul>
-		</div>
-    </nav>
-    <section>
-		<div style="padding: 20px;">
-			<article id="one">
-				<h2 style="margin:0px">개요</h2>
-				<p>
-					최초의 스마트폰은 사이몬(Simon)으로 추정된다. IBM사가 1992년에 설계하였으며...
-				</p>
-			</article>
-			<article id="two">
-				<h2>윤석열 정부</h2>
-				<p>
-					안드로이드는 휴대 전화를 비롯한 다양한 장치를 위한 운영 체제와 미들웨어...
-				</p>
-			</article>
-			<article id="three">
-				<h2>three 국회</h2>
-				<p>
-					아이폰은 애플이 개발한 휴대 전화 시리즈이다. 미국 샌프란시스코에서 열린...
-				</p>
-			</article>
-		</div>
-    </section>
+	<div>
+		<nav>
+			<div style="padding:1px;position: relative;">
+				<h3 style="margin-top: 0px;margin-bottom: 0px;">목차</h3>
+				<ul style="display: inline-block;"> 
+					<li><a href="#one">1.</a> 개요</li>
+					<li><a href="#two">2.</a> 윤석열 정부
+						<ul style="display: block;">
+							<li><a href="#twoOne">2-1. twoOne</a></li>
+							<li><a href="#twoTwo">2-2. twoTwo</a></li>
+							<li><a href="#twoThree">2-3. twoThree</a></li>
+							<li><a href="#twoFour">2-4. twoFour</a></li>
+						</ul>
+					</li>
+					<li><a href="#three">3.</a> 제22대 국회</li>
+					<li><a href="#four">4.</a> 대한민국 정부</li>
+					<li><a href="#five">5.</a> 유사 사례 비교</li>
+					<li><a href="#six">six 국회</a></li>
+					<li><a href="#seven">seven 국회</a></li>
+					<li><a href="#eight">eight 국회</a></li>
+					<li><a href="#nine">nine 국회</a></li>
+					<li><a href="#ten">ten 국회</a></li>
+				</ul>
+			</div>
+		</nav>
+		<section>
+			<div style="padding: 20px;">
+				<article id="one">
+					<h2 style="margin:0px">개요</h2>
+					<p>
+						2024년 12월 3일 윤석열 정부 비상계엄 선포와 이로 인해 발생한 일련의 사건들에 대한 평가 및 실패 요인을 분석한 하위 문서.</p>
+				</article>
+				<article id="two">
+					<h2>윤석열 정부</h2>
+					<p>
+						윤석열이 제20대 대통령으로 취임하면서 국민 앞에서 맹세한 선서와 기념사에서 강조된 자유민주주의를 비롯한 많은 가치들은 갑작스러운 비상계엄 선포로 인해 공허한 울림이 되고 말았다. 이런 약속들을 거스르면서까지 윤석열 정부가 선포한 비상계엄은 결국 효력을 잃었고, 당초 계엄 세력이 계획한 국회의원들의 체포와 비상계엄 해제 결의안 가결 차단도 실패했다. 비록 계엄령 자체는 시민과 국회의원들의 빠른 대응으로 해제되었으나, 군부독재를 민주항쟁으로 몰아낸 대한민국의 민주국가로서의 위상이 흔들린 것은 자명한 일이다.
+						<br><br>
+						이번 비상계엄은 국민들이 납득할 만한 정당한 명분이 부족할 뿐더러 친위 쿠데타로 비춰질 수 있는 여지가 많다. 일체의 정치활동을 금한다는 조항부터가 위헌적인데다가, 군경을 동원해 국회를 공격했으며, 국회의장과 여/야당 대표를 구금한다는 계획이 발설되었고, 실제로도 수방사 특임대가 이재명 더불어민주당 대표의 사무실을 침입하는 모습이 담긴 CCTV까지 공개되었다. 또한 1979년 이후 사상 처음으로 야당 당사가 군경에게 습격당하는 일이 발생했으며, 헌법 기관인 중앙선거관리위원회에도 군 병력이 배치되었다는 증거가 나오고 있어 반헌법적 요소가 쏟아지는 중이다. 특히 선관위를 무력 점거한 행위는 헌법기관에 대한 공격이라 군사반란이 적용될 여지가 있어 결국 윤석열 대통령이 군사반란수괴로 소추되는 빌미를 제공했다. 이는 기존 탄핵소추 사유였던 노무현의 정치중립 위반, 박근혜의 외부인의 국정 개입 허용과는 비교할 수 없을 정도로 심각한 문제다. 앞선 두 번의 탄핵소추 사유는 '민주주의의 작동 과정에서 중대한 하자가 있었던 것'이라면, 이 비상계엄은 '민주주의 자체를 중단시키려 한 것'이기 때문이다. 이는 대한민국 헌법 제1조 제1항 '대한민국은 민주공화국이다.'를 정면으로 위배한다고 간주될 수 있는 행위라는 점에서 탄핵소추가 제기되었던 앞선 두 대통령의 상황과는 위법성의 정도가 차원이 다른 수준이다.
+						<br><br>
+						결국 윤석열 대통령은 야당과의 정치 경쟁 능력을 상실한 것을 자인하고 정치적 자폭을 한 것이다. 친윤파는 사건 다음날까지도 대통령에 대한 탈당요구를 하냐 마냐를 두고 발목을 잡거나# 탄핵하면 20년 동안 정권 못 잡고[1] 여기 있는 사람(비공개 의총 참석 의원들) 다 조사받는다며 # 결사옹위를 시도하는 등 박근혜 때의 친박과 마찬가지로 개인 안위 사수에만 골몰하는 모습을 보인다. 국민의힘 내부에서는 비윤계를 중심으로 탄핵에 동참해야 한다는 의견도 조심스럽게 나오기 시작했다. # 이같이 여당 내에서도 탄핵 논의가 나오기 시작하는 상황에 대해 경향신문은 윤 대통령의 리더십이 완전히 붕괴했다고 평했다. #
+						<br><br>
+						심지어 5일을 기점으로 상당수의 여당 의원들이 아예 계엄령을 옹호하거나 적극 지지하며 야당과 국민 전체를 탓하는 방식으로 논점을 흐리고 여론을 뒤집으려는 사보타주와 다름 없는 행동을 하자 역으로 시민들이 자신들의 해당 지역구의 의원으로 당선된 국민의힘 의원들을 사퇴시키려고 하는 시위로 맞받아치고[2] 윤석열 정부가 저지른 비상계엄 사태와 이런 만행을 옹호하기 바쁜 국민의힘에 분노한 국민의힘 당원들이 탈당으로 답하는 모습을 보이면서 윤석열의 방탄을 했다가 오히려 자신들의 정치 인생이 끝장나게 될 지경에 놓였다.[3]
+						<br><br>
+						결국 윤석열 정부와 친윤계는 자신들의 극소수 강성 지지자들을 제외한 모든 국민에게 신뢰를 전부 잃어버림과 동시에 공공의 적으로 낙인찍혔다는 결론이 도출된다.
+						<br><br>
+					</p>
+				</article>
+				<article id="three">
+					<h2>three 국회</h2>
+					<p>
+						아이폰은 애플이 개발한 휴대 전화 시리즈이다. 미국 샌프란시스코에서 열린...
+					</p>
+				</article>
+			</div>
+		</section>
+	</div>
+    
     <footer>
-		<a href="/testHosting/signup">로그인</a>
-        <p>Copyright 2022 by Kitae</p>
-    </footer>
+		<div>
+			<a href="/testHosting/signup">로그인</a>
+			<p>Copyright 2022 by Kitae</p>
+		</div>
+	</footer>
 </body>
 </html>
