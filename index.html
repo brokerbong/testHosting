@@ -5,13 +5,16 @@
 	let colorPicker;
 	function initFunction() {
 		//backColorTag
+		console.log('init');
 		colorPicker = document.querySelector(".backColorTag");
+		console.log(colorPicker);
 		colorPicker.addEventListener("change", updateAll, false);
 	}
 	function updateAll(event) {
-	  document.querySelectorAll("section").forEach((value) => {
-	    value.style.color = event.target.value;
-	  });
+		console.log('update');
+		document.querySelectorAll("section").forEach((value) => {
+			value.style.color = event.target.value;
+		});
 	}
 	
 	//input을 1위 부터 100개의 곡 -> 인덱스로 저장 -> select value로
