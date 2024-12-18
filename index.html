@@ -15,7 +15,7 @@
 		console.log('init');
 		colorPicker = document.querySelector(".backColorTag");
 		console.log(colorPicker);
-		colorPicker.addEventListener("change", updateAll, false);
+		colorPicker.addEventListener("input", updateAll, false);
 		colorPicker.select();
 		console.log('init end');
 	}
