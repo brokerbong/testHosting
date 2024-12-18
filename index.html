@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <script>
+	//input을 1위 부터 100개의 곡 -> 인덱스로 저장 -> select value로
+	var youtubePlaylist = [
+		'https://youtu.be/RuORKyaDPCo?si=-enn1Ewogq9b3zSi',
+		'https://youtu.be/zpIsw1MnUj0?si=sjA1E2cj-blV4Xnt',
+		'https://youtu.be/UwZcOLvxkAA?si=jNL79e8YsVu8a-Lg',
+		'https://youtu.be/rKUJG5TdAl8?si=au2JiA9lGSamnL1a'
+	];
+
+	function selectYoutubePlay(num){
+		console.log(num);
+		console.log(this.youtubePlaylist);
+		console.log(youtubePlaylist[num-1]);
+		//youtubeIframe
+		document.querySelector('.youtubeIframe').src = youtubePlaylist[num-1];
+	}
+	
 	function modalClose(){
 		document.querySelector('.modal').style.display = 'none';
 		//document.querySelector('section').style.overflow = 'auto';
@@ -176,7 +192,11 @@
 				<p>
 					2024년 12월 3일 윤석열 정부 비상계엄 선포와 이로 인해 발생한 일련의 사건들에 대한 평가 및 실패 요인을 분석한 하위 문서.
 				</p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/BioxVfIy9zM?si=dDmD9CML5PBP15kP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<button type="button" onclick="selectYoutubePlay(1)">1</button>
+				<button type="button" onclick="selectYoutubePlay(2)">2</button>
+				<button type="button" onclick="selectYoutubePlay(3)">3</button>
+				<button type="button" onclick="selectYoutubePlay(4)">4</button>
+				<iframe class="youtubeIframe" width="560" height="315" src="https://www.youtube.com/embed/BioxVfIy9zM?si=dDmD9CML5PBP15kP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</article>
 			<article id="two">
 				<h2>윤석열 정부</h2>
