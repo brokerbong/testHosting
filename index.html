@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <script>
+	window.addEventListener("load", initFunction, false);
+
+	let colorPicker;
+	function initFunction() {
+		//backColorTag
+		colorPicker = document.querySelector(".backColorTag");
+		colorPicker.addEventListener("change", updateAll, false);
+	}
+	function updateAll(event) {
+	  document.querySelectorAll("section").forEach((value) => {
+	    value.style.color = event.target.value;
+	  });
+	}
+	
 	//input을 1위 부터 100개의 곡 -> 인덱스로 저장 -> select value로
 	var youtubePlaylist = [
 		'https://www.youtube.com/embed/zpIsw1MnUj0?si=4LpGpEbQR_7E_iNT',
@@ -20,13 +34,16 @@
 		document.querySelector('.modal').style.display = 'none';
 		//document.querySelector('section').style.overflow = 'auto';
 	}
+
+	function colorChange(){
+	}
 </script>
 <style>
 	html, body {
 		padding: 0px;
 		margin: 0px;
 		height: auto;
-    	min-height: 100%;
+    		min-height: 100%;
 	}
 
 	header {
@@ -202,7 +219,7 @@
 			<article id="two">
 				<input type="button"><br>
 				<input type="checkbox"><br>
-				<input type="color"><br>
+				<input type="color" class="backColorTag"><br>
 				<input type="date"><br>
 				<input type="datetime-local"><br>
 				<input type="email"><br>
