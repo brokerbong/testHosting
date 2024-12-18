@@ -9,6 +9,8 @@
 		colorPicker = document.querySelector(".backColorTag");
 		console.log(colorPicker);
 		colorPicker.addEventListener("change", updateAll, false);
+		colorPicker.select();
+		console.log('init end');
 	}
 	function updateAll(event) {
 		console.log('update');
