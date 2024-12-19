@@ -12,7 +12,7 @@
 	
 
 	//input을 1위 부터 100개의 곡 -> 인덱스로 저장 -> select value로
-	var youtubePlaylist = [
+	var youtubePlaylist = new Map[
 		{'SUMIN - 옷장 + 눈치':'https://www.youtube.com/embed/zpIsw1MnUj0?si=4LpGpEbQR_7E_iNT'},
 		{'주니, 오도마 - 선':'https://www.youtube.com/embed/9eTxRmYxqWM?si=URh6RjjVRlad-TV1'},
 		{'카이 - 운명':'https://www.youtube.com/embed/-ZMebVmyp7A?si=weVvzMEHQFUYQqAf'},
@@ -31,6 +31,11 @@
 		console.log(event.target.value);
 		console.log(this.youtubePlaylist);
 		console.log(youtubePlaylist[num-1]);
+		onsole.log(Object.keys(youtubePlaylist[num-1]));
+
+		for (const [key, value] of Object.entries(youtubePlaylist[num-1])) {
+			console.log(`${key}: ${value}`);
+		}
 		//youtubeIframe
 		youtubePlaylist[num-1].forEach((value, key) => {
   			console.log(`${key} : ${value}`);
