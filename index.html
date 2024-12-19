@@ -29,19 +29,16 @@
 	function selectYoutubePlay(event){
 		var num = event.target.value
 		console.log(event.target.value);
-		console.log(this.youtubePlaylist);
-		console.log(youtubePlaylist[num-1]);
-		console.log(Object.keys(youtubePlaylist[num-1]));
-
+		//console.log(this.youtubePlaylist);
+		//console.log(youtubePlaylist[num-1]);
+		//console.log(Object.keys(youtubePlaylist[num-1]));
+		//youtubeIframe
 		for (const [key, value] of Object.entries(youtubePlaylist[num-1])) {
 			console.log(`${key}: ${value}`);
-		}
-		//youtubeIframe
-		youtubePlaylist[num-1].forEach((value, key) => {
-  			console.log(`${key} : ${value}`);
 			document.querySelector('.youtubeIframe').src = value;
 			document.querySelector('.playerInfoPTag').value = key;
-		})
+		}
+		
 	}
 	
 	function modalClose(){
