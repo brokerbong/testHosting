@@ -13,11 +13,17 @@
 
 	//input을 1위 부터 100개의 곡 -> 인덱스로 저장 -> select value로
 	var youtubePlaylist = [
-		'https://www.youtube.com/embed/BioxVfIy9zM?si=dDmD9CML5PBP15kP',
-		'https://www.youtube.com/embed/zpIsw1MnUj0?si=4LpGpEbQR_7E_iNT',
-		'https://www.youtube.com/embed/lfhlcK_4ltQ?si=DVFBurVjSUUrb9Gn',
-		'https://www.youtube.com/embed/hy56c-4k4uQ?si=hUmapl9N3FZiFQ3M',
-		'https://www.youtube.com/embed/rKUJG5TdAl8?si=wugd6J0cn2M-keIU'
+		{'SUMIN - 옷장 + 눈치':'https://www.youtube.com/embed/zpIsw1MnUj0?si=4LpGpEbQR_7E_iNT'},
+		{'주니, 오도마 - 선':'https://www.youtube.com/embed/9eTxRmYxqWM?si=URh6RjjVRlad-TV1'},
+		{'카이 - 운명':'https://www.youtube.com/embed/-ZMebVmyp7A?si=weVvzMEHQFUYQqAf'},
+		{'김민혜 - 두근두근 내 마음':'https://www.youtube.com/embed/0Prt2aBOqOc?si=c6TUzACSNt8Ft1Og'},
+		{'브라운 티거 - 스물열살':'https://www.youtube.com/embed/lfhlcK_4ltQ?si=DVFBurVjSUUrb9Gn'},
+		{'sameolemeek':'https://www.youtube.com/embed/rKUJG5TdAl8?si=wugd6J0cn2M-keIU'},
+		{'박민성 - 나 메셀라':'https://www.youtube.com/embed/x6I3EGUK0oc?si=5MpAR0IYNRw3OuFb'},
+		{'윤상 - 재회':'https://www.youtube.com/embed/hy56c-4k4uQ?si=hUmapl9N3FZiFQ3M'},
+		{'서범석 - 파멸의 길로':https://www.youtube.com/embed/bPL-yIFVTc4?si=cnIXAmj8aUoN8Ym_'},
+		{'최여원 - 보이오는길':https://www.youtube.com/embed/L_PINAcw9bI?si=up4IhCO-xhgs0o_6'},
+		{'camo - faeak like me':https://www.youtube.com/embed/x4XOZ4LotYc?si=v9Uw-g9yt0HT2UFa'}
 	];
 
 	function selectYoutubePlay(event){
@@ -26,7 +32,11 @@
 		//console.log(this.youtubePlaylist);
 		//console.log(youtubePlaylist[num-1]);
 		//youtubeIframe
-		document.querySelector('.youtubeIframe').src = youtubePlaylist[num-1];
+		youtubePlaylist[num-1].forEach((value, key) => {
+  			console.log(`${key] : ${value}`);
+			document.querySelector('.youtubeIframe').src = value;
+			document.querySelector('.playerInfoPTag').value = key;
+		}
 	}
 	
 	function modalClose(){
@@ -333,8 +343,17 @@
 					
 						  <input type="radio" id="Choice9" name="recap" value="9" />
 						  <label for="Choice9">Favorite 9</label>
+
+						<input type="radio" id="Choice10" name="recap" value="10" />
+						  <label for="Choice9">Favorite 10</label>
+
+						<input type="radio" id="Choice11" name="recap" value="11" />
+						  <label for="Choice9">Favorite 11</label>
 						</div>
 					</fieldset>
+				</div>
+				<div class ="playerInfo">
+					<p class="playerInfoPTag"></p>
 				</div>
 				<iframe class="youtubeIframe" width="560" height="315" src="https://www.youtube.com/embed/BioxVfIy9zM?si=dDmD9CML5PBP15kP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			
