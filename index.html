@@ -36,7 +36,7 @@
 		for (const [key, value] of Object.entries(youtubePlaylist[num-1])) {
 			console.log(`${key}: ${value}`);
 			document.querySelector('.youtubeIframe').src = value;
-			document.querySelector('.playerInfoPTag').value = key;
+			document.querySelector('.playerInfoPTag').innerText = key;
 		}
 		
 	}
@@ -347,10 +347,10 @@
 						  <label for="Choice9">Favorite 9</label>
 
 						<input type="radio" id="Choice10" name="recap" value="10" />
-						  <label for="Choice9">Favorite 10</label>
+						  <label for="Choice10">Favorite 10</label>
 
 						<input type="radio" id="Choice11" name="recap" value="11" />
-						  <label for="Choice9">Favorite 11</label>
+						  <label for="Choice11">Favorite 11</label>
 						</div>
 					</fieldset>
 				</div>
