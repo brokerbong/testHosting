@@ -33,7 +33,7 @@
 		//console.log(youtubePlaylist[num-1]);
 		//youtubeIframe
 		youtubePlaylist[num-1].forEach((value, key) => {
-  			console.log(`${key] : ${value}`);
+  			console.log(`${key} : ${value}`);
 			document.querySelector('.youtubeIframe').src = value;
 			document.querySelector('.playerInfoPTag').value = key;
 		})
