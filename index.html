@@ -59,7 +59,33 @@
 		})
 	}
 	//function  selectYoutubeRadio
+	function addComment(){
+		//infoChat -> infoBody -> chatContents -> chatContent
+		// contentHeader contentBody
+		// body -> chatWrite ? textArea, writeBtn
+		var textAreaContent = document.querySelector('.textArea').value;
+		if (!textAreaContent.trim()) {
+			alert('내용을 입력하세요.');
+			return;
+		}
+		const now = new Date();
+		const currentDate = now.toISOString().split('T')[0];
+		const currentTime = now.toTimeString().split(' ')[0].slice(0, 5);
 
+		const newChatContent = `
+			<div class="chatContent">
+				<div class="contentHeader">
+					게시일 ${currentDate} ${currentTime}
+				</div>
+				<div class="contentBody">
+					${textAreaContent}
+				</div>
+			</div>
+		`;
+
+		document.querySelector('.chatContents').innerHTML += newChatContent;
+		document.querySelector('.textArea').value = '';
+	}
 
 	function initFunction() {
 		//backColorTag
@@ -234,24 +260,24 @@
 		
 	}
 	.chatContent{
-		
+		padding: 5px;
+		border: 1px solid #ddd;
+		margin-top: 3px;
+		margin-bottom: 3px;
 	}
 	.contentHeader{
 		
 	}
 	.contentBody{
-		
+		margin: 20px;
 	}
 
 	.chatWrite h4{
 		border-top:1px solid #ddd;
 	}
 	.writeBtn{
-		width: 18%; */
-		/* padding: 18px 0 16px; */
 		text-align: center;
 		box-sizing: border-box;
-		/* text-decoration: none; */
 		border: none;
 		background: #333;
 		color: #fff;
@@ -272,12 +298,13 @@
 					1. Button - popup / 닫기버튼<br>
 					2. Radio - 유튜브 RECAP Favorite 버튼 <br>
 					3. input Text - 로그인<br>
-					4. testarea - 방명록<br>
+					4. textarea - 방명록<br>
 					5. footer -> color -> background 색깔 변경<br><br>
 					Event<br>
 					1. nav 목록 선택<br>
 					2. 유튜브 Favorite 선택<br>
 					3. fotter background 색깔 변경<br>
+					4. alert - 방명록 미입력 메시지
 				</p>
 			</div>
 			
@@ -289,7 +316,7 @@
 
     <header>
 	<div class="headerTitle">
-		자기소개
+		자기소개 페이지의 Title
 	</div>
     </header>
 	<!--<div style="background: orange;">-->
@@ -298,7 +325,9 @@
 		<div style="padding:5%;position: relative;">
 			<!--프로필-->
 			<div class="profileDiv">
-				<img class="profileImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYIh8ZMxkAfHBBLoZbCS0gHTnzhnOqNNp9w&s">
+				<img class="profileImg" src="img/전석봉_증명사진.JPG">
+				<!--
+				https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYIh8ZMxkAfHBBLoZbCS0gHTnzhnOqNNp9w&s-->
 				<div class="profileNameBlock">
 					<a class="profileName">BEN</a>
 				</div>
@@ -316,9 +345,11 @@
 					<li onclick="selectInfo('infoYoutube')">
 						유튜브 RECAP
 					</li>
+					<!--
 					<li onclick="selectInfo('infoTrail')">
 						여행
 					</li>
+					-->
 					<li onclick="selectInfo('infoChat')">
 						방명록
 					</li>
@@ -342,10 +373,6 @@
 							<strong>자기소개 페이지</strong>
 						</li>
 						<li>
-							본인 이미지: 
-							<img src="" width="80" height="80"/>
-						</li>
-						<li>
 							<b>이름: </b> <em>전석봉</em> 
 						</li>
 						<li>
@@ -354,7 +381,7 @@
 							<!--<ins>미래인재학부</ins><br>-->
 						</li>
 						<li>
-							<b>학번: </b> <mark>2406009</mark>
+							<b>학번: </b> 2406009
 						</li>
 						<li>
 							<b>주소: </b> <del>주소는 개인정보</del>
@@ -363,6 +390,83 @@
 							<b>피곤함: </b><input type="range" value="90" disabled></input>
 						</li>
 					</ui>
+					
+					<table style="border: 1px, solid">
+				<caption>시간표</caption>
+				<thead style="border: 1px, solid">
+					<tr>
+						<td>시간</td>
+						<td>과목</td>
+						<td>위치</td>
+						<td>교수</td>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="4" style="text-align: center;">footer</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>09:00</td>
+						<td>데이터 사이언스 기초</td>
+						<td>미래관B111</td>
+						<td>신성</td>
+					</tr>
+					<tr>
+						<td>10:00</td>
+						<td>AI를 위한 기초수학1</td>
+						<td>미래관B111</td>
+						<td>신성</td>
+					</tr>
+					<tr>
+						<td>11:00</td>
+						<td rowspan="2" colspan="3" style="text-align: center;">공강</td>
+					</tr>
+					<tr>
+						<td>12:00</td>
+					</tr>
+					<tr>
+						<td>13:00</td>
+						<td rowspan="2">C프로그래밍</td>
+						<td rowspan="2">미래관B111</td>
+						<td rowspan="2">장현주</td>
+					</tr>
+					<tr>
+						<td>14:00</td>
+					</tr>
+					<tr>
+						<td>15:00</td>
+						<td rowspan="2">웹프로그래밍</td>
+						<td rowspan="2">미래관B111</td>
+						<td rowspan="2">장현주</td>
+					</tr>
+					<tr>
+						<td>16:00</td>
+					</tr>
+					<tr>
+						<td>17:00</td>
+						<td>AI와 SW기초</td>
+						<td>미래관B111</td>
+						<td>양숙희</td>
+					</tr>
+					<tr>
+						<td>18:00</td>
+						<td rowspan="2">컴퓨터 구조</td>
+						<td rowspan="2">미래관B103</td>
+						<td rowspan="2">양숙희</td>
+					</tr>
+					<tr>
+						<td>19:00</td>
+					</tr>
+					<tr>
+						<td>20:00</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
 				</div>
 			</article>
 			<article class="infoYoutube">
@@ -428,14 +532,15 @@
 			</article>
 			<article class="infoChat" >
 				<div class="infoTitle">방명록 남기기</div>
+				
 				<div class="infoBody">
 					<div class="chatContents">
 						<div class="chatContent">
 							<div class="contentHeader">
-								게시일 2024.12.20 10:26 / 닉네임
+								게시일 2024.12.20 10:26
 							</div>
 							<div class="contentBody">
-								안녕하세요. 내용물입니다.
+								안녕하세요. 방명록 칸입니다.
 							</div>
 						</div>
 						
@@ -446,7 +551,7 @@
 							<textarea class="textArea" rows="6" cols="22"></textarea>
 						</div>
 						<div style="float: right;padding-top:7px;">
-							<input class="writeBtn" type="button" value="입력">
+							<input class="writeBtn" type="button" value="입력" onclick="addComment()">
 						</div>
 					</div>
 				</div>
@@ -457,9 +562,9 @@
     
     <footer>
 		<div>
-			<a href="/testHosting/signup">로그인</a><br>
+			<a href="/testHosting/signup">로그인</a><br><br>
 			<input type="color" class="backColorTag"><br>
-			<p>헤이헤이</p>
+			<p>헤이헤이~</p>
 		</div>
 	</footer>
 </body>
