@@ -223,14 +223,14 @@
 			<div class="modalContents">
 				<h3>크아아아악 깃허브 서버 왜이래!!!</h3>
 				<p>
-					- popup - modal <br>
-					*****input<br>
+					- popup - modal <br><br>
+					input<br>
 					1. Button - popup / 닫기버튼<br>
 					2. Radio - 유튜브 RECAP Favorite 버튼 <br>
 					3. input Text - 로그인<br>
 					4. testarea - 방명록<br>
-					5. footer -> color -> background 색깔 변경<br>
-					*****Event<br>
+					5. footer -> color -> background 색깔 변경<br><br>
+					Event<br>
 					1. nav 목록 선택<br>
 					2. 유튜브 Favorite 선택<br>
 					3. fotter background 색깔 변경<br>
@@ -285,112 +285,126 @@
 	<section>
 		<div class="mainContents" style="padding: 20px;min-height: 1000px;">
 			<article class="infoMain">
-				<img src="img/lovelyhachu-iDidIt.gif" loop=infinite/>
+				<div class="infoTitle">타이틀</div>
+				<div class="infoBody">
+					<img src="img/lovelyhachu-iDidIt.gif" loop=infinite/>
+				</div>
 			</article>
 			<article class="infoMe">
-				<ui style="list-style:none;">
-					<li>
-						<strong>자기소개 페이지</strong>
-					</li>
-					<li>
-						본인 이미지: 
-						<img src="" width="80" height="80"/>
-					</li>
-					<li>
-						<b>이름: </b> <em>전석봉</em> 
-					</li>
-					<li>
-						<b>학과: </b>
-						<a href="https://futureplus.hansung.ac.kr/ko/department/f_education" target="_blank">미래인재학부</a>
-						<!--<ins>미래인재학부</ins><br>-->
-					</li>
-					<li>
-						<b>학번: </b> <mark>2406009</mark>
-					</li>
-					<li>
-						<b>주소: </b> <del>주소는 개인정보</del>
-					</li>
-					<li>
-						<b>피곤함: </b><input type="range" value="90" disabled></input>
-					</li>
-				</ui>
+				<div class="infoTitle">타이틀</div>
+				<div class="infoBody">
+					<ui style="list-style:none;">
+						<li>
+							<strong>자기소개 페이지</strong>
+						</li>
+						<li>
+							본인 이미지: 
+							<img src="" width="80" height="80"/>
+						</li>
+						<li>
+							<b>이름: </b> <em>전석봉</em> 
+						</li>
+						<li>
+							<b>학과: </b>
+							<a href="https://futureplus.hansung.ac.kr/ko/department/f_education" target="_blank">미래인재학부</a>
+							<!--<ins>미래인재학부</ins><br>-->
+						</li>
+						<li>
+							<b>학번: </b> <mark>2406009</mark>
+						</li>
+						<li>
+							<b>주소: </b> <del>주소는 개인정보</del>
+						</li>
+						<li>
+							<b>피곤함: </b><input type="range" value="90" disabled></input>
+						</li>
+					</ui>
+				</div>
 			</article>
 			<article class="infoYoutube">
-				<!--
-				<button type="button" onclick="selectYoutubePlay(1)">1</button>
-				<button type="button" onclick="selectYoutubePlay(2)">2</button>
-				<button type="button" onclick="selectYoutubePlay(3)">3</button>
-				<button type="button" onclick="selectYoutubePlay(4)">4</button>
-				-->
-				<div class="selectArea" style="">
-					<fieldset class="selectAreaSet">
-						<legend>버튼을 선택하여 Favorite 노래를 확인하세요.</legend>
-						<div>
-						  <input type="radio" id="Choice1" name="recap" value="1" />
-						  <label for="Choice1">Favorite 1</label>
-					
-						  <input type="radio" id="Choice2" name="recap" value="2" />
-						  <label for="Choice2">Favorite 2</label>
-					
-						  <input type="radio" id="Choice3" name="recap" value="3" />
-						  <label for="Choice3">Favorite 3</label>
-
-						  <input type="radio" id="Choice4" name="recap" value="4" />
-						  <label for="Choice4">Favorite 4</label>
-					
-						  <input type="radio" id="Choice5" name="recap" value="5" />
-						  <label for="Choice5">Favorite 5</label>
-					
-						  <input type="radio" id="Choice6" name="recap" value="6" />
-						  <label for="Choice6">Favorite 6</label>
-
-						  <input type="radio" id="Choice7" name="recap" value="7" />
-						  <label for="Choice7">Favorite 7</label>
-					
-						  <input type="radio" id="Choice8" name="recap" value="8" />
-						  <label for="Choice8">Favorite 8</label>
-					
-						  <input type="radio" id="Choice9" name="recap" value="9" />
-						  <label for="Choice9">Favorite 9</label>
-
-						<input type="radio" id="Choice10" name="recap" value="10" />
-						  <label for="Choice10">Favorite 10</label>
-
-						<input type="radio" id="Choice11" name="recap" value="11" />
-						  <label for="Choice11">Favorite 11</label>
-						</div>
-					</fieldset>
+				<div class="infoTitle">타이틀</div>
+				<div class="infoBody">
+					<!--
+					<button type="button" onclick="selectYoutubePlay(1)">1</button>
+					<button type="button" onclick="selectYoutubePlay(2)">2</button>
+					<button type="button" onclick="selectYoutubePlay(3)">3</button>
+					<button type="button" onclick="selectYoutubePlay(4)">4</button>
+					-->
+					<div class="selectArea" style="">
+						<fieldset class="selectAreaSet">
+							<legend>버튼을 선택하여 Favorite 노래를 확인하세요.</legend>
+							<div>
+							  <input type="radio" id="Choice1" name="recap" value="1" />
+							  <label for="Choice1">Favorite 1</label>
+						
+							  <input type="radio" id="Choice2" name="recap" value="2" />
+							  <label for="Choice2">Favorite 2</label>
+						
+							  <input type="radio" id="Choice3" name="recap" value="3" />
+							  <label for="Choice3">Favorite 3</label>
+	
+							  <input type="radio" id="Choice4" name="recap" value="4" />
+							  <label for="Choice4">Favorite 4</label>
+						
+							  <input type="radio" id="Choice5" name="recap" value="5" />
+							  <label for="Choice5">Favorite 5</label>
+						
+							  <input type="radio" id="Choice6" name="recap" value="6" />
+							  <label for="Choice6">Favorite 6</label>
+	
+							  <input type="radio" id="Choice7" name="recap" value="7" />
+							  <label for="Choice7">Favorite 7</label>
+						
+							  <input type="radio" id="Choice8" name="recap" value="8" />
+							  <label for="Choice8">Favorite 8</label>
+						
+							  <input type="radio" id="Choice9" name="recap" value="9" />
+							  <label for="Choice9">Favorite 9</label>
+	
+							<input type="radio" id="Choice10" name="recap" value="10" />
+							  <label for="Choice10">Favorite 10</label>
+	
+							<input type="radio" id="Choice11" name="recap" value="11" />
+							  <label for="Choice11">Favorite 11</label>
+							</div>
+						</fieldset>
+					</div>
+					<div class ="playerInfo">
+						<p class="playerInfoPTag">SUMIN - 늦은 아침</p>
+					</div>
+					<iframe class="youtubeIframe" width="560" height="315" src="https://www.youtube.com/embed/BioxVfIy9zM?si=dDmD9CML5PBP15kP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				</div>
-				<div class ="playerInfo">
-					<p class="playerInfoPTag">SUMIN - 늦은 아침</p>
-				</div>
-				<iframe class="youtubeIframe" width="560" height="315" src="https://www.youtube.com/embed/BioxVfIy9zM?si=dDmD9CML5PBP15kP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			
 			</article>
 			<article class="infoTrail">
-				infoTrail
+				<div class="infoTitle">타이틀</div>
+				<div class="infoBody">
+					infoTrail
+				</div
 			</article>
 			<article class="infoChat" style="display:none;">
-				<div class="chatContents">
-					<div class="chatContent">
-						<div class="contentHeader">
-							게시일 2024.12.20 10:26 / 닉네임
+				<div class="infoTitle">타이틀</div>
+				<div class="infoBody">
+					<div class="chatContents">
+						<div class="chatContent">
+							<div class="contentHeader">
+								게시일 2024.12.20 10:26 / 닉네임
+							</div>
+							<div class="contentBody">
+								안녕하세요. 내용물입니다.
+							</div>
 						</div>
-						<div class="contentBody">
-							안녕하세요. 내용물입니다.
-						</div>
-					</div>
-					
-				</div>
-				<div class="chatWrite">
-					<div class="">
 						
 					</div>
-					<div class="">
-						<textarea class="textArea" rows="6" cols="22"></textarea>
-					</div>
-					<div class="">
-						<input type="button">
+					<div class="chatWrite">
+						<div class="">
+							
+						</div>
+						<div class="">
+							<textarea class="textArea" rows="6" cols="22"></textarea>
+						</div>
+						<div class="">
+							<input type="button">
+						</div>
 					</div>
 				</div>
 			</article>
