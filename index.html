@@ -182,7 +182,9 @@
 		width:100%;
 		float: right;
 	}
-
+	.mainContents{
+		min-height: 1000px;
+	}
 	.infoArea{
 		border-top: 1px solid #ddd;
 	}
@@ -197,13 +199,15 @@
 		cursor:pointer;
 	}
 	.infoMain{
-		
+
 	}
 	.infoTitle{
-	
+		margin-bottom: 2rem;
+		padding: 1rem;
+		border: 1px solid;
 	}
 	.infoBody{
-		
+		padding: 20px;
 	}
 	.infoMe{
 		display: none;
@@ -250,9 +254,9 @@
 	</div>
 
     <header>
-		<div>
-			GitHub의 Deploy에 걸리는 시간은 40초입니다.
-		</div>
+	<div class="headerTitle">
+		제목을 어떻게 꾸미는게 좋을까요?
+	</div>
     </header>
 	<!--<div style="background: orange;">-->
 		
@@ -289,7 +293,7 @@
 		</div>
 	</nav>
 	<section>
-		<div class="mainContents" style="padding: 20px;min-height: 1000px;">
+		<div class="mainContents" >
 			<article class="infoMain">
 				<div class="infoTitle">타이틀</div>
 				<div class="infoBody">
