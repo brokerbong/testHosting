@@ -205,6 +205,8 @@
 	.infoYoutube{
 		display: none;
 	}
+	.infoTrail{
+		display: none;
 	.infoChat{
 		display: none;
 	}
@@ -216,11 +218,11 @@
 			<div class="modalContents">
 				<h3>크아아아악 깃허브 서버 왜이래!!!</h3>
 				<p>
-					popup - modal<br>
-					popup - 닫기버튼<br>
-					유튜브 리스트 - option tag<br>
-					로그인 폼 - input password<br>
-					방명록 -> input tag -> ajax 연결<br>
+					1. popup - modal <br>
+					1. popup - 닫기버튼<br>
+					1. 유튜브 리스트 - radio button<br>
+					1. 로그인 폼 - input password<br>
+					1. 방명록 -> input TextArea <br>
 					nav -> 선택 버튼?<br>
 					footer -> color -> background 색깔 변경<br>
 				</p>
@@ -261,6 +263,9 @@
 					<li onclick="selectInfo('infoYoutube')">
 						유튜브 RECAP
 					</li>
+					<li onclick="selectInfo('infoTrail')">
+						여행
+					</li>
 					<li onclick="selectInfo('infoChat')">
 						방명록
 					</li>
@@ -274,13 +279,9 @@
 				<img src="img/lovelyhachu-iDidIt.gif" loop=infinite/>
 			</article>
 			<article class="infoMe">
-				<ui style="list-style:none;text-">
+				<ui style="list-style:none;">
 					<li>
 						<strong>자기소개 페이지</strong>
-					</li>
-					<li>
-						학교 이미지:
-						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYIh8ZMxkAfHBBLoZbCS0gHTnzhnOqNNp9w&s" width="80" height="80">
 					</li>
 					<li>
 						본인 이미지: 
@@ -299,9 +300,6 @@
 					</li>
 					<li>
 						<b>주소: </b> <del>주소는 개인정보</del>
-					</li>
-					<li>
-						<a href="signup.html" target="_blank">회원가입</a>
 					</li>
 					<li>
 						<b>피곤함: </b><input type="range" value="90" disabled></input>
@@ -355,13 +353,33 @@
 					</fieldset>
 				</div>
 				<div class ="playerInfo">
-					<p class="playerInfoPTag"></p>
+					<p class="playerInfoPTag">SUMIN - 늦은 아침</p>
 				</div>
 				<iframe class="youtubeIframe" width="560" height="315" src="https://www.youtube.com/embed/BioxVfIy9zM?si=dDmD9CML5PBP15kP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			
 			</article>
+			<article class="infoTrail">
+				infoTrail
+			</article>
 			<article class="infoChat">
-				infoChat
+				<div class="chatContents">
+					<div class="chatContent">
+						<div class="contentHeader">
+							게시일 2024.12.20 10:26 / 닉네임
+						</div>
+						<div class="contentBody">
+							안녕하세요. 내용물입니다.
+						</div>
+					</div>
+					
+				</div>
+				<div class="chatWrite">
+					<div class="">
+						<textarea rows="6" cols="22">
+							초깃값을 지정하려면 콘텐츠에 직접 삽입하면 됩니다.
+						</textarea>
+					</div>
+				</div>
 			</article>
 		</div>
 	</section>
